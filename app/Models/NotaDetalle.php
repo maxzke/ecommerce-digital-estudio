@@ -37,27 +37,27 @@ class NotaDetalle extends Model
     }
     public function procesoTexto()
     {
-        return $this->hasOne(ProcesoInformacion::class);
+        return $this->hasOne(ProcesoInformacion::class, 'nota_detalle_id');
     }
     public function procesoImagen()
     {
-        return $this->hasOne(ProcesoRevision::class);
+        return $this->hasOne(ProcesoRevision::class, 'nota_detalle_id');
     }
     public function procesoMaterial()
     {
-        return $this->hasOne(ProcesoMaterial::class);
+        return $this->hasOne(ProcesoMaterial::class, 'nota_detalle_id');
     }
     public function procesoDiseno()
     {
-        return $this->hasOne(ProcesoDiseno::class);
+        return $this->hasOne(ProcesoDiseno::class, 'nota_detalle_id');
     }
     public function procesoPrensa()
     {
-        return $this->hasOne(ProcesoPrensa::class);
+        return $this->hasOne(ProcesoPrensa::class, 'nota_detalle_id');
     }
     public function procesoEntrega()
     {
-        return $this->hasOne(ProcesoEntrega::class);
+        return $this->hasOne(ProcesoEntrega::class, 'nota_detalle_id');
     }
     protected function producto(): Attribute
     {

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id();
+            $table->enum('tipo', ['producto', 'servicio'])->default('producto');
             $table->string('nombre')->unique();
             $table->text('descripcion');
             $table->decimal('precio_base', 9, 1)->default(0);

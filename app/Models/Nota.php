@@ -20,19 +20,19 @@ class Nota extends Model
     ];
     public function cliente()
     {
-        return $this->belongsTo(Cliente::class);
+        return $this->belongsTo(Cliente::class, 'cliente_id');
     }
     public function usuario()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
     public function productos()
     {
-        return $this->hasMany(NotaDetalle::class);
+        return $this->hasMany(NotaDetalle::class, 'nota_id');
     }
     public function abonos()
     {
-        return $this->hasMany(Abono::class);
+        return $this->hasMany(Abono::class, 'nota_id');
     }
     public function scopeCarrito(Builder $query)
     {
@@ -65,6 +65,6 @@ class Nota extends Model
                 $total += $producto->precio * $producto->cantidad;
             }
         }
-        return number_format($total, 2);
+        return number_format($total, 1);
     }
 }

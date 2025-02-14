@@ -12,7 +12,8 @@ class PuntoDeVentaController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Pos/Index');
+        //return Inertia::render('Pos/Index');
+        return Inertia::render('Punto-de-venta/Index');
     }
 
     /**

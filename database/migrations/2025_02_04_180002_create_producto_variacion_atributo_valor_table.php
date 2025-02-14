@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('producto_variacion_atributo_valor', function (Blueprint $table) {
             $table->id();
             $table->foreignId('producto_variacion_id');
-            $table->foreign('producto_variacion_id')->references('id')->on('producto_variacion')->constrained()->onDelete('cascade');
+            $table->foreign('producto_variacion_id')->references('id')->on('producto_variaciones')->constrained()->onDelete('cascade');
             $table->foreignId('atributo_valor_id');
             $table->foreign('atributo_valor_id')->references('id')->on('atributo_valores')->constrained()->onDelete('cascade');
             $table->timestamps();

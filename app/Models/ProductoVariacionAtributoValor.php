@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class ProductoVariacionAtributoValor extends Model
 {
     use HasFactory;
+    protected $table = 'producto_variacion_atributo_valor';
 }

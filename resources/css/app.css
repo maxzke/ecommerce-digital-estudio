@@ -5,7 +5,7 @@
 
 
 
-
+/* 
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -61,12 +61,12 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
-}
+} */
 
 
 
 
-/* @layer base {
+ @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -93,16 +93,16 @@
     --destructive-foreground: 0 0% 98%;
   
     --border:0 0% 89.8%;
-    --input:0 0% 89.8%;
-    --ring:0 0% 3.9%;
+    --input:0 0% 79.8%;
+    --ring:0 0% 80.9%;
     --radius: 0rem;
   }
    
   .dark {
-    --background:0 0% 3.9%;
+    --background:0 0% 10.2%;
     --foreground:0 0% 98%;
   
-    --card:0 0% 3.9%;
+    --card:0 0% 14.1%;
     --card-foreground:0 0% 98%;
   
     --popover:0 0% 3.9%;
@@ -123,11 +123,11 @@
     --destructive:0 62.8% 30.6%;
     --destructive-foreground:0 0% 98%;
   
-    --border:0 0% 14.9%;
-    --input:0 0% 14.9%;
-    --ring:0 0% 83.1%;
+    --border:0 0% 18.9%;
+    --input:0 0% 26.9%;
+    --ring:0 0% 30.1%;
   }
-} */
+} 
 
 
 

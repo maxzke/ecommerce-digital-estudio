@@ -14,10 +14,10 @@ class MetodoPago extends Model
     ];
     public function pagos()
     {
-        return $this->hasMany(Pago::class);
+        return $this->hasMany(PagoAProveedor::class, 'metodo_de_pago_id');
     }
     public function abonos()
     {
-        return $this->hasMany(Abono::class);
+        return $this->hasMany(Abono::class, 'metodo_de_pago_id');
     }
 }

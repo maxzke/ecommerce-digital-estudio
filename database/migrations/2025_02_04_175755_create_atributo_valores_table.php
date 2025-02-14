@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('atributo_valores', function (Blueprint $table) {
-            $table->id();
-
+            $table->id()->constrained()->onDelete('cascade');
             $table->foreignId('atributo_id');
             $table->foreign('atributo_id')->references('id')->on('atributos')->constrained()->onDelete('cascade');
             $table->string('valor'); // Ejemplo: 'Rojo', 'Grande'

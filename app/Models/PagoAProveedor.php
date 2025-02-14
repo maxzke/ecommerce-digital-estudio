@@ -30,6 +30,6 @@ class PagoAProveedor extends Model
     }
     public function detalles()
     {
-        return $this->hasMany(PagoDetalle::class);
+        return $this->hasMany(PagoDetalle::class, 'pagos_a_proveedor_id');
     }
 }
